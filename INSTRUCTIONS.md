@@ -4,10 +4,10 @@ For this assignment, you will be creating a reflection/feedback form modeled aft
 
 ### SETUP
 
-Create your database and tables using the provided `data.sql` file. Start the server.
+Create your database and tables using the provided `data.sql` file. Start the server. //done 
 
 ```
-npm install
+npm install//DONE
 npm run server
 ```
 
@@ -16,6 +16,72 @@ Now that the server is running, open a new terminal tab with `cmd + t` and start
 ```
 npm run client
 ```
+
+
+//Notes: 
+- Every question will need a component page.
+    - 4 components/pages for form
+        - QuestionOne: How are you feeling today?
+            - h1- with question 
+            - Input box 
+            - sends to database 
+            - Score pop up alert requiring an in put 
+            - Next Button 
+        - QuestionTwo: How well are you understanding the content?
+            - h1- with question 
+            - Input box 
+            - sends to database 
+            - Score pop up alert requiring an in put 
+            - Next Button 
+        - QuestionThree:How well are you being supported?
+            - h1- with question 
+            - Input box 
+            - sends to database 
+            - Score pop up alert requiring an in put 
+            - Next Button 
+        - QuestionFour:Any comments you want to leave?
+            - h1- with question 
+            - Input box
+            - comment is optional no pop alert is needed.  
+            - sends to database 
+            - Next Button 
+- Routes/links in app.jsx 
+- Review page will access all the questions and answers
+    - h1 Review Feedback- notice that youre on feedback page 
+    - shows question summary/ your inputted scoure 
+    - has submit button-  submit button is clicked, save the submission in the database. takes you to the submit sucess page. 
+
+- Submission sucess Page
+    - notice that your on this page 
+    - Leave another feedback button that resets form
+    - 
+
+
+Stretch goal: 
+- on Review page: Allow the user to go back to a previous step and change their score. You still need to disallow empty values!
+    - Idea maybe have Go back button for every page. or edit button next to each question on review page that links to those pages. 
+    - question pages will need an edit button or the ablility to be changed automatically 
+    - 
+
+- admin page: list all feedback entries 
+    - uses /admin route
+    - Feedback Results: notice is displayed at top 
+    - feedback is displayed in table. 
+        - Columns: Feeling, Comphrension, Support, Comments, Delete
+            - Delete has an icon, when clicked deletes row from databse and removes it from the DOM 
+            
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### ADD NEW FEEDBACK
 
