@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 // import axios from 'axios';
 import './App.css';
 
-
-import { HashRouter as Router, Route } from "react-router-dom";
 
 import NavBar from '../NavBar/NavBar';
 
@@ -11,9 +10,9 @@ import NavBar from '../NavBar/NavBar';
 import QuestionOne from '../QuestionOne/QuestionOne.jsx';
 import QuestionTwo from '../QuestionTwo/QuestionTwo.jsx';
 import QuestionThree from '../QuestonThree/QuestionThree.jsx';
-import QuestionFour from '../QuestionFour/QuestionFour.jsx'; 
-import ReviewPage from '../ReviewPage/ReviewPage'; 
-import SubmissionSucessPage from '../SubmissionSucessPage/SubmissionSucessPage'; 
+import QuestionFour from '../QuestionFour/QuestionFour.jsx';
+import ReviewPage from '../ReviewPage/ReviewPage';
+import SubmissionSucessPage from '../SubmissionSucessPage/SubmissionSucessPage';
 
 
 function App() {
@@ -21,33 +20,34 @@ function App() {
   return (
     <div className='App'>
       <Router>
+
         <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <QuestionOne />
+          </Route>
 
-            <Route path="/">
-              <QuestionOne />
-            </Route>
+          <Route path="/QuestionTwo">
+            <QuestionTwo />
+          </Route>
 
-            <Route path="/QuestionTwo">
-              <QuestionTwo/>
-            </Route>
-         
-            <Route path="/QuestionThree">
-              <QuestionThree/>
-            </Route>
+          <Route path="/QuestionThree">
+            <QuestionThree />
+          </Route>
 
-            <Route path="/QuestionFour">            
-              <QuestionFour />
-            </Route>
+          <Route path="/QuestionFour">
+            <QuestionFour />
+          </Route>
 
-            <Route path="/ReviewPage">            
-              <ReviewPage />
-            </Route>
+          <Route path="/ReviewPage">
+            <ReviewPage />
+          </Route>
 
-            <Route path="/SubmissionSucessPage">            
-              <SubmissionSucessPage />
-            </Route>
-
-        </Router>
+          <Route path="/SubmissionSucessPage">
+            <SubmissionSucessPage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
