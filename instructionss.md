@@ -8,6 +8,7 @@ Create your database and tables using the provided `data.sql` file. Start the se
 
 ```
 npm install//DONE
+npm install react-router-dom@5 //DONE
 npm run server
 ```
 
@@ -73,7 +74,7 @@ Stretch goal:
 
 
 
-
+- installed this on project direcotry: npm install @mui/material @emotion/react @emotion/styled 
 
 
 
