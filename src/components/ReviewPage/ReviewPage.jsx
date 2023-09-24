@@ -1,5 +1,14 @@
 import React from "react";
-import { HashRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+
+
+
+//Material UI dialog box 
+import Button from '@mui/material/Button';
+
+
+
+
 
 function ReviewPage() {
 
@@ -9,13 +18,17 @@ function ReviewPage() {
         <h1> REVIEW YOUR FEEDBACK</h1>
 
 
+
+        <Button
+                component={Link}
+                to={"/SubmissionSucessPage"}
+                variant="contained"
+                color="primary"
+            > Submit </Button>
+
+
         
   
-
-            <p> 
-                <Link to="/SubmissionSucessPage"> Submit </Link>
-            </p>
-        
         
         
         

@@ -1,5 +1,10 @@
 import React from "react";
-import { HashRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+
+
+
+//Material UI dialog box 
+import Button from '@mui/material/Button';
 
 
 function QuestionThree() {
@@ -11,12 +16,15 @@ function QuestionThree() {
 
 
             <h2> Support? </h2>
+
+            <Button
+                component={Link}
+                to={"/QuestionFour"}
+                variant="contained"
+                color="primary"
+            > Next </Button>
   
 
-            <p>
-                <Link to="/QuestionFour"> Next </Link>
-            </p>
-        
         
         
         

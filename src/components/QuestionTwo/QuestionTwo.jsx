@@ -1,25 +1,34 @@
 import React from "react";
-import { HashRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+
+
+
+//Material UI dialog box 
+import Button from '@mui/material/Button';
+
+
 
 function QuestionTwo() {
 
 
-    return(
+    return (
         <>
-        <h1> How well are you understanding the content? </h1>
+            <h1> How well are you understanding the content? </h1>
 
 
             <h2> Understanding? </h2>
-  
 
-            <p>
-                <Link to="/QuestionThree"> Next </Link>
-            </p>
-        
-        
-        
-        
-        
+            <Button
+                component={Link}
+                to={"/QuestionThree"}
+                variant="contained"
+                color="primary"
+            > Next </Button>
+
+
+
+
+
         </>
     )
 };

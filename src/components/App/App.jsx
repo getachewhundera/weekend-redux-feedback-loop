@@ -11,8 +11,8 @@ import QuestionOne from '../QuestionOne/QuestionOne.jsx';
 import QuestionTwo from '../QuestionTwo/QuestionTwo.jsx';
 import QuestionThree from '../QuestonThree/QuestionThree.jsx';
 import QuestionFour from '../QuestionFour/QuestionFour.jsx';
-import ReviewPage from '../ReviewPage/ReviewPage';
-import SubmissionSucessPage from '../SubmissionSucessPage/SubmissionSucessPage';
+import ReviewPage from '../ReviewPage/ReviewPage.jsx';
+import SubmissionSucessPage from '../SubmissionSucessPage/SubmissionSucessPage.jsx'
 
 
 function App() {

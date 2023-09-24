@@ -20,41 +20,43 @@ npm run client
 
 
 //Notes: 
-- Every question will need a component page.
+- Every question will need a component page.//DONE 
     - 4 components/pages for form
         - QuestionOne: How are you feeling today?
-            - h1- with question 
+            - h1- with question//DONE  
             - Input box 
             - sends to database 
             - Score pop up alert requiring an in put 
-            - Next Button 
+            - Next Button //DONE 
         - QuestionTwo: How well are you understanding the content?
-            - h1- with question 
+            - h1- with question //DONE 
             - Input box 
             - sends to database 
             - Score pop up alert requiring an in put 
-            - Next Button 
+            - Next Button //DONE 
         - QuestionThree:How well are you being supported?
-            - h1- with question 
+            - h1- with question //DONE 
             - Input box 
             - sends to database 
             - Score pop up alert requiring an in put 
-            - Next Button 
+            - Next Button //DONE 
         - QuestionFour:Any comments you want to leave?
-            - h1- with question 
+            - h1- with question //DONE 
             - Input box
             - comment is optional no pop alert is needed.  
             - sends to database 
-            - Next Button 
-- Routes/links in app.jsx 
+            - Next Button //DONE 
+- Routes/links in app.jsx //DONE 
 - Review page will access all the questions and answers
-    - h1 Review Feedback- notice that youre on feedback page 
+    - h1 Review Feedback- notice that youre on feedback page //DONE 
     - shows question summary/ your inputted scoure 
-    - has submit button-  submit button is clicked, save the submission in the database. takes you to the submit sucess page. 
+    - has submit button //DONE 
+        -  submit button is clicked, save the submission in the database. takes you to the submit sucess page. 
 
 - Submission sucess Page
     - notice that your on this page 
-    - Leave another feedback button that resets form
+    - Leave another feedback button //Done 
+        - Button that resets form
     - 
 
 

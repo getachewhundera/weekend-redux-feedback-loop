@@ -1,6 +1,12 @@
-
 import React from "react";
-import { HashRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+
+
+
+//Material UI dialog box 
+import Button from '@mui/material/Button';
+
+
 
 function SubmissionSucessPage() {
 
@@ -12,13 +18,15 @@ function SubmissionSucessPage() {
 
 
         <h2> Thank You! </h2>
+
+        <Button
+                component={Link}
+                to={"/"}
+                variant="contained"
+                color="primary"
+            > Leave New Feedback </Button>
         
-        
-        <p>
-            <Link to="/"> Leave New Feedback </Link>
-        </p>
-        
-        
+    
         
         
         
