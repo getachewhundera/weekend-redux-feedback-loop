@@ -76,9 +76,10 @@ Stretch goal:
 
 
 
-- installed this on project direcotry: npm install @mui/material @emotion/react @emotion/styled 
-
-
+- installed this on project directory: npm install @mui/material @emotion/react @emotion/styled 
+- installed: npm install redux-saga
+- installed: npm install redux@4 react-redux@7
+- installed: npm install redux-logger@3
 
 
 
