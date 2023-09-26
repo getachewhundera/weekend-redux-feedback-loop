@@ -20,6 +20,11 @@ npm run client
 
 
 //Notes: 
+
+Create database on postico. //DONE 
+create route in server file. //DONE 
+create crud routes in router file. 
+
 - Every question will need a component page.//DONE 
     - 4 components/pages for form
         - QuestionOne: How are you feeling today?
