@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 
 //Material UI dialog box 
 import Button from '@mui/material/Button';
+import { useSelector } from "react-redux";
 
 
 
@@ -13,14 +14,25 @@ import Button from '@mui/material/Button';
 
 function ReviewPage() {
 
+    const feedbackItems = useSelector(store => store.feedbackItems);
 
-    return(
+
+    return (
         <>
-        <h1> REVIEW YOUR FEEDBACK</h1>
+            <h1> REVIEW YOUR FEEDBACK</h1>
+
+
+            <ul>
+                {feedbackItems.map((feedback, i) => (
+                    <li key={i}>{feedback}</li>
+                ))}
+            </ul>
 
 
 
-        <Button
+
+
+            <Button
                 component={Link}
                 to={"/SubmissionSucessPage"}
                 variant="contained"
@@ -28,12 +40,12 @@ function ReviewPage() {
             > Submit </Button>
 
 
-        
-  
-        
-        
-        
-        
+
+
+
+
+
+
         </>
     )
 };

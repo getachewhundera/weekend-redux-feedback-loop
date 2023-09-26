@@ -8,11 +8,13 @@ import logger from 'redux-logger';
 import { applyMiddleware, combineReducers } from 'redux';
 import { put, takeEvery } from 'redux-saga/effects';
 
+import axios from 'axios';
 
 //redux-saga 
 import createSagaMiddleware from 'redux-saga';
 
 const sagaMiddleware = createSagaMiddleware(); 
+
 
 
 
@@ -25,11 +27,11 @@ function* watcherSaga() {
 
 
 const feedbackArray = [];
-
+//Reducer 
 const feedbackItems = (state = feedbackArray, action) => {
     switch (action.type) {
-        case 'SET_FEEDBACK': 
-        return action.payload; 
+        case 'ADD_FEEDBACK': 
+        return [...state, action.payload]; 
         default: 
         return state; 
     }
