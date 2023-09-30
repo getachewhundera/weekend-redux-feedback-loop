@@ -6,9 +6,9 @@ import {createStore} from 'redux';
 import { Provider} from 'react-redux';
 import logger from 'redux-logger';
 import { applyMiddleware, combineReducers } from 'redux';
-// import { put, takeEvery } from 'redux-saga/effects';
+import { takeEvery } from 'redux-saga/effects';
 
-// import axios from 'axios';
+import axios from 'axios';
 
 //redux-saga 
 import createSagaMiddleware from 'redux-saga';
@@ -79,8 +79,8 @@ const feedbackItemOne = (state = [], action) => {
         yield axios.post('/feedback', state);
     } catch (error) {
         console.error('Error submitting feedback', error);
-    }
-}
+    };
+};
 
 
 function* rootSaga() {

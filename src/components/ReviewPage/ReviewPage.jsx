@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 //Material UI dialog box 
 import Button from '@mui/material/Button';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 
 
@@ -13,6 +13,11 @@ import { useSelector } from "react-redux";
 //Have questions be held in temproary storage, render it in this page, and when sumbit gets clicked have it sent to database for "permanent storage"
 
 function ReviewPage() {
+
+    const dispatch = useDispatch();
+    const handleSubmit = () => {
+        dispatch({ type: 'SUBMIT_FEEDBACK' }); 
+    }; 
 
     const feedbackItemOne = useSelector(store => store.feedbackItemOne);
     const feedbackItemTwo = useSelector(store => store.feedbackItemTwo);
@@ -57,6 +62,7 @@ function ReviewPage() {
             </ul>
 
             <Button
+                onClick={handleSubmit}
                 component={Link}
                 to={"/SubmissionSucessPage"}
                 variant="contained"
