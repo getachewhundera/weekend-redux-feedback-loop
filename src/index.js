@@ -15,9 +15,9 @@ import createSagaMiddleware from 'redux-saga';
 
 const sagaMiddleware = createSagaMiddleware(); 
 
-//   function* watcherSaga() {
-
-//   };
+  function* watcherSaga() {
+    yield takeEvery('SUBMIT_FEEDBACK', submitFeedback);
+  };
 
 //reducers
 
@@ -70,11 +70,22 @@ const feedbackItemOne = (state = [], action) => {
 
 
   //SAGAS
+  //submits whole store to the database. 
+  function* submitFeedback() {
+    try {
+      //selects entire store. 
+        const state= yield select(state => state.store);
+        //sends(post) to server to then post on databse. 
+        yield axios.post('/feedback', state);
+    } catch (error) {
+        console.error('Error submitting feedback', error);
+    }
+}
 
 
-// function* rootSaga() {
-//     yield watcherSaga(); 
-// }; 
+function* rootSaga() {
+    yield watcherSaga(); 
+}; 
 
 
 
@@ -88,7 +99,7 @@ const store = createStore(
     }), 
     applyMiddleware(sagaMiddleware, logger), 
 ); 
-// sagaMiddleware.run(rootSaga); 
+sagaMiddleware.run(rootSaga); 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
