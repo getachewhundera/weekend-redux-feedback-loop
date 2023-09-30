@@ -14,3 +14,25 @@ router.get('/', (req, res) => {
       res.sendStatus(500);
     });
 });
+
+
+router.post('/', (req, res) => {
+  const newFeedback = req.body;
+  const queryText = `INSERT INTO feedback ("feeling", "understanding", "support", "comments")
+                    VALUES ($1, $2, $3, $4)`;
+  const queryValues = [
+    newFeedback.feeling,
+    newFeedback.understanding,
+    newFeedback.support,
+    newFeedback.comments,
+  
+  ];
+  pool.query(queryText, queryValues)
+    .then(() => { res.sendStatus(201); })
+    .catch((err) => {
+      console.log('Error completing SELECT feedback query', err);
+      res.sendStatus(500);
+    });
+});
+
+module.exports = router;

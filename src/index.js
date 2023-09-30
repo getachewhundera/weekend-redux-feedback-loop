@@ -6,76 +6,89 @@ import {createStore} from 'redux';
 import { Provider} from 'react-redux';
 import logger from 'redux-logger';
 import { applyMiddleware, combineReducers } from 'redux';
-import { put, takeEvery } from 'redux-saga/effects';
+// import { put, takeEvery } from 'redux-saga/effects';
 
-import axios from 'axios';
+// import axios from 'axios';
 
 //redux-saga 
 import createSagaMiddleware from 'redux-saga';
 
 const sagaMiddleware = createSagaMiddleware(); 
 
+//   function* watcherSaga() {
 
+//   };
 
+//reducers
 
-
-function* watcherSaga() {
-    yield takeEvery('SEND_QUESTIONONE_INPUT_TO_SERVER', SEND_QUESTIONONE_INPUT); 
-    yield takeEvery('FETCH_FEEDBACK_ITEMS', fetchFeedback )
-
-}
-
-
-const feedbackArray = [];
-//Reducer 
-const feedbackItems = (state = feedbackArray, action) => {
+const feedbackItemOne = (state = [], action) => {
     switch (action.type) {
-        case 'ADD_FEEDBACK': 
-        return [...state, action.payload]; 
-        default: 
-        return state; 
+      case 'ADD_ANSWER_ONE':
+        return [action.payload]
+      default:
+        return state;
     }
-}; 
+  };
 
-function* fetchFeedback() {
-    try{
-        const response = axios.get('/'); 
-        const action = { type: 'SET_FEEDBACK', payload: response.data}; 
-        yield put(action) 
-    } catch (error) {
-        alert('something went wrong'); 
-        console.log(`Error in fetchFeedback ${error}`); 
-        throw error
+  const feedbackItemTwo = (state = [], action) => {
+    switch (action.type) {
+      case 'ADD_ANSWER_TWO':
+        return [action.payload]
+      default:
+        return state;
     }
-}; 
+  };
 
-
-function* SEND_QUESTIONONE_INPUT(action) {
-    try{
-        yield axios.post('/feedbackInput', action.payload);
-        yield put({ type: 'FETCH_FEEDBACK_ITEMS'}); 
-    } catch (error) {
-        alert('something went wrong'); 
-        console.log(`Error in addFeedback: ${error}`);
-        throw error
+  const feedbackItemThree = (state = [], action) => {
+    switch (action.type) {
+      case 'ADD_ANSWER_THREE':
+        return [action.payload]
+      default:
+        return state;
     }
-}
+  };
 
-function* rootSaga() {
-    yield watcherSaga(); 
-}; 
+  const feedbackItemFour= (state = [], action) => {
+    switch (action.type) {
+      case 'ADD_ANSWER_FOUR':
+        return [action.payload]
+      default:
+        return state;
+    }
+  };
+
+  //Old reducer that does not delete previous response off the review page. 
+//   const feedbackItemFour= (state = [], action) => {
+//     switch (action.type) {
+//       case 'ADD_ANSWER_FOUR':
+//         return [...state, action.payload];
+//       default:
+//         return state;
+//     }
+//   };
+
+
+
+  //SAGAS
+
+
+// function* rootSaga() {
+//     yield watcherSaga(); 
+// }; 
 
 
 
 
 const store = createStore(
     combineReducers({
-        feedbackItems
+        feedbackItemOne, 
+        feedbackItemTwo, 
+        feedbackItemThree, 
+        feedbackItemFour
     }), 
     applyMiddleware(sagaMiddleware, logger), 
 ); 
-sagaMiddleware.run(rootSaga); 
-sagaMiddleware.run(watcherSaga); 
+// sagaMiddleware.run(rootSaga); 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -20,10 +20,10 @@ function NavBar() {
                     variant="contained"
                     color="primary"
                 > Home </Button>
-                <h1> new comment </h1> 
+              
 
             </header> 
-            {/* //lc */}
+         
 
         </>
         

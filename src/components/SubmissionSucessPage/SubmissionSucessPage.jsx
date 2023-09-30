@@ -17,7 +17,7 @@ function SubmissionSucessPage() {
 
 
 
-        <h2> Thank You! </h2>
+        <h2> Submission Sucessful. Thank You! </h2>
 
         <Button
                 component={Link}

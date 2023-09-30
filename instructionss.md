@@ -26,42 +26,47 @@ create route in server file. //DONE
 create crud routes in router file. 
 
 - Every question will need a component page.//DONE 
-    - 4 components/pages for form
-        - QuestionOne: How are you feeling today?
+    - 4 components/pages for form//DONE
+        - QuestionOne: How are you feeling today?//DONE
             - h1- with question//DONE  
-            - Input box 
+            - Input box //DONE
+            - Input shows up on Review Page //DONE
             - sends to database 
             - Score pop up alert requiring an in put 
             - Next Button //DONE 
-        - QuestionTwo: How well are you understanding the content?
+        - QuestionTwo: How well are you understanding the content?//DONE
             - h1- with question //DONE 
-            - Input box 
+            - Input box //DONE
+            - Input shows up on Review Page //DONE
             - sends to database 
             - Score pop up alert requiring an in put 
             - Next Button //DONE 
-        - QuestionThree:How well are you being supported?
+        - QuestionThree:How well are you being supported?//DONE
             - h1- with question //DONE 
-            - Input box 
+            - Input box //DONE
+            - Input shows up on Review Page //DONE
             - sends to database 
             - Score pop up alert requiring an in put 
             - Next Button //DONE 
-        - QuestionFour:Any comments you want to leave?
+        - QuestionFour:Any comments you want to leave?//DONE
             - h1- with question //DONE 
-            - Input box
-            - comment is optional no pop alert is needed.  
+            - Input box//DONE
+            - comment is optional no pop alert is needed.  //DONE
+            - comment shows up on Review page but is optional //DONE
             - sends to database 
             - Next Button //DONE 
 - Routes/links in app.jsx //DONE 
-- Review page will access all the questions and answers
+- Review page will access all the questions and answers //DONE
     - h1 Review Feedback- notice that youre on feedback page //DONE 
-    - shows question summary/ your inputted scoure 
+    - shows question summary/ your inputted scores //DONE
     - has submit button //DONE 
-        -  submit button is clicked, save the submission in the database. takes you to the submit sucess page. 
+        -  submit button is clicked, save the submission in the database. 
+        - takes you to the submit sucess page. 
 
-- Submission sucess Page
-    - notice that your on this page 
+- Submission sucess Page //DONE created. 
+    - notice that your on this page //DONE has text notifying you what page your on. 
     - Leave another feedback button //Done 
-        - Button that resets form
+        - Button that resets form //DONE 
     - 
 
 
