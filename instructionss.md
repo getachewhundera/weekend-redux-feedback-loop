@@ -31,21 +31,21 @@ create crud routes in router file.
             - h1- with question//DONE  
             - Input box //DONE
             - Input shows up on Review Page //DONE
-            - sends to database 
+            - sends to database //DONE 
             - Score pop up alert requiring an in put 
             - Next Button //DONE 
         - QuestionTwo: How well are you understanding the content?//DONE
             - h1- with question //DONE 
             - Input box //DONE
             - Input shows up on Review Page //DONE
-            - sends to database 
+            - sends to database //DONE 
             - Score pop up alert requiring an in put 
             - Next Button //DONE 
         - QuestionThree:How well are you being supported?//DONE
             - h1- with question //DONE 
             - Input box //DONE
             - Input shows up on Review Page //DONE
-            - sends to database 
+            - sends to database //DONE 
             - Score pop up alert requiring an in put 
             - Next Button //DONE 
         - QuestionFour:Any comments you want to leave?//DONE
@@ -53,15 +53,15 @@ create crud routes in router file.
             - Input box//DONE
             - comment is optional no pop alert is needed.  //DONE
             - comment shows up on Review page but is optional //DONE
-            - sends to database 
+            - sends to database //DONE 
             - Next Button //DONE 
 - Routes/links in app.jsx //DONE 
 - Review page will access all the questions and answers //DONE
     - h1 Review Feedback- notice that youre on feedback page //DONE 
     - shows question summary/ your inputted scores //DONE
     - has submit button //DONE 
-        -  submit button is clicked, save the submission in the database. 
-        - takes you to the submit sucess page. 
+        -  submit button is clicked, save the submission in the database. //DONE 
+        - takes you to the submit sucess page. //DONE 
 
 - Submission sucess Page //DONE created. 
     - notice that your on this page //DONE has text notifying you what page your on. 

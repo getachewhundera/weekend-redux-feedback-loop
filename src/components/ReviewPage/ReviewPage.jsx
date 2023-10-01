@@ -9,8 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 
-//Need to have all inputted questions show up in this review page, 
-//Have questions be held in temproary storage, render it in this page, and when sumbit gets clicked have it sent to database for "permanent storage"
 
 function ReviewPage() {
 
